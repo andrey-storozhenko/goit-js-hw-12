@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+.item-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1128px;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.item-gallery {
+    width: calc((1128px - 24px * 2) / 3);
+    border: 1px solid black;
+    position: relative;
+    height: 250px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 4px 0;
+
+}
+
+.item-stats {
+    text-align: center;
+}
+
+.container {
+    width: 1128px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+input[name="search-text"] {
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+input[name="search-text"]:hover {
+    border: 1px solid black;
+}
+
+input[name="search-text"]:focus {
+    border: 1px solid #4E75FF;
+    outline: none;
+}
+
+button[type="submit"],
+.find-more {
+    padding: 8px 16px;
+    margin-left: 8px;
+    background-color: #4E75FF;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.find-more {
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #6C8CFF;
+}
+
+.hideLoader {
+    visibility: hidden;
+}
+
+.showLoader {
+    visibility: visible;
+}
+
+.showLoadMoreButton {
+    visibility: visible;
+}
+
+.hideLoadMoreButton {
+    visibility: hidden;
+}
+
+
+.loader {
+    font-size: 18px;
+    color: black;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+    margin-top: 20px;
+}
+
+.loader:after {
+    content: '';
+    height: 4px;
+    width: 0%;
+    display: block;
+    background: #FF3D00;
+    animation: 5s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {
+    to {
+        width: 100%;
+    }
+}
