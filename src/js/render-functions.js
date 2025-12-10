@@ -64,11 +64,3 @@ export function hideLoadMoreButton() {
     fetchCardsBtn.classList.add("hideLoadMoreButton");
 }
 
-export function scrollBy() {
-    let elem = document.querySelector(".item-gallery");
-    let rect = elem.getBoundingClientRect();
-    window.scrollBy({
-        top: rect.height * 2,
-        behavior: 'smooth',
-    });
-}
